@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+	
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>TZ-Developement - Accueil</title>
+		<meta name="title" content="TZ-Developement - Accueil">
+		<meta name="description" content="Tuto Développement Scripts FiveM, Documentations, Shop">
+		<script src="../kit.fontawesome.com/a4cacc32f2.js" crossorigin="anonymous"></script>
+		<meta name="keywords" content="fivem,tutoriel,lua,shop,ressources,TheZerox,TZ-Developement,gta5,base,script,mapping">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			::-webkit-scrollbar
+			{
+				width: 10px;
+			}
+
+			::-webkit-scrollbar-track
+			{
+				background: black;
+			}
+
+			::-webkit-scrollbar-thumb
+			{
+				background: black;
+			}
+
+			::-webkit-scrollbar-thumb:hover
+			{
+				background: black;
+			}
+
+		</style>
+		<link rel="stylesheet" href="assets/css/tailwind.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="shortcut icon" href="assets/img/creator/logo.png" type="image/png">
+		<meta property="og:type" content="article">
+		<meta property="og:url" content="https://TZ-Developement.fr/">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="TZ-Developement - Accueil">
+		<meta property="og:description" content="Tutoriel | créations | shop">
+		<meta property="og:image" content="assets/img/creator/logo.png">
+		<meta property="og:site_name" content="TZ-Developement">
+	</head>
+	<body class="bg-gray-800">
+		<header class="pb-4 lg:pb-28">
+			<div class="relative">
+				<div class="header">
+					<div class="assets/img/creator/logo.png"></div>
+					<div class="header__texture"></div>
+					<div class="container">
+						<div class="max-w-7xl mx-auto px-4 sm:px-6">
+							<div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+								<div class="flex justify-start lg:w-0 lg:flex-1">
+									<a href="index.html">
+										<span class="sr-only">TZ-Developement</span>
+										<img class="h-13 w-auto sm:h-20" src="assets/img/creator/logo.png" alt="TZ-Developement">
+									</a>
+								</div>
+								<div class="-mr-2 -my-2 md:hidden">
+									<button onclick="navbarToogleOn()" type="button" class="bg-gray-700 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-300 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500" aria-expanded="false">
+										<span class="sr-only">Ouvrir le menu</span>
+										<svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+										</svg>
+									</button>
+								</div>
+								
+								<nav class="hidden md:flex space-x-10">
+									<a href="index.html" class="text-base font-medium text-gray-300 hover:text-gray-50">
+										Accueil    
+									</a>
+									<div class="relative " x-data="{ isOpen: false}">
+										<button @click="isOpen = !isOpen" @keydown.escape="isOpen = false" type="button" class="text-gray-300 group rounded-md inline-flex items-center text-base font-medium hover:text-gray-50" aria-expanded="false">
+											<span>Créations</span>
+											<svg class="text-gray-300 ml-2 h-5 w-5 group-hover:text-gray-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+												<path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+											</svg>
+										</button>
+										<div x-show="isOpen" @click.away="isOpen = false" class="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+											<div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
+												<div class="relative grid gap-6 bg-gray-800 px-5 py-6 sm:gap-8 sm:p-8">
+													<a href="creations-TheZerox.html" class="-m-3 p-3 flex items-start rounded-lg hover:bg-gray-700">
+														<svg class="flex-shrink-0 h-6 w-6 text-blue-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+															<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+														</svg>
+														<div class="ml-4">
+															<p class="text-base font-medium text-white">
+																Créations TheZerox                                                                                    
+															</p>
+															<p class="mt-1 text-sm text-white">
+																Des créations simples mais bien faites.                                                                                    
+															</p>
+														</div>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</nav>
+								<div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+									<a href="https://discord.gg/rKhqhM5zcf" class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-700 hover:bg-blue-600">              Discord            </a>
+								</div>
+							</div>
+						</div>
+						<div id="mobileNavbar" class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50">
+							<div class="rounded-lg shadow-lg bg-gray-800 ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
+							  <div class="pt-5 pb-6 px-5">
+								<div class="flex items-center justify-between">
+								  <div>
+									<img class="h-8 w-auto" src="assets/img/creator/logo.png" alt="Workflow">
+								  </div>
+								  <div class="-mr-2">
+									<button onclick="navbarToogleOff()" type="button" class="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+									  <span class="sr-only">Fermer le menu</span>
+									  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+									  </svg>
+									</button>
+								  </div>
+								</div>
+								<div class="mt-6">
+								  <nav class="grid gap-y-8">
+									<a href="index.html" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+									  <img src="assets/img/icons/home.png" alt="Accueil" style="height: 35px;">
+									  <span class="ml-3 text-base font-medium text-white">
+										Accueil
+									  </span>
+									</a>
+									<a href="https://discord.gg/rKhqhM5zcf" target="_blank" class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50">
+									  <img src="assets/img/icons/discord.png" alt="Discord" style="height: 35px;">
+									  <span class="ml-3 text-base font-medium text-white">
+										Discord
+									  </span>
+									</a>
+								  </nav>
+								</div>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					</div>
+					<div class="wave wave1"></div>
+					<div class="wave wave2"></div>
+					<div class="wave wave3"></div>
+					<div class="wave wave3"></div>
+					<div class="wave wave4"></div>
+				</div>
+			</div>
+		</header>
+		<main>
+			
+			<div>
+				<div class="relative pb-14 z-0">
+					<div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-800"></div>
+					<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+						<div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+							<div class="absolute inset-0">
+								<img class="h-full w-full object-cover" src="https://giphy.com/gifs/26tn33aiTi1jkl6H6" alt="People working on laptops">
+								<div class="absolute inset-0 bg-blue-500 mix-blend-multiply"></div>
+							</div>
+							<div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-20 lg:px-8">
+								<h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+									<span class="block text-black cst-title-TZ-Developement">TZ-Developement</span>
+									<span class="block text-white-5000">Développement FiveM</span>
+								</h1>
+								<p class="mt-6 max-w-lg mx-auto text-center text-xl text-blue-50 sm:max-w-3xl">
+									Tu es créateur de serveur ou bien développeur ? Ou alors peut-être juste un curieux ? Alors TZ-Developement est fait pour toi. Ici tu trouveras des leak ou des créations de qualité mais aussi un shop de qualité à prix raisonable                                                 
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="relative bg-gray-800 max-w-7xl mx-auto px-4 sm:px-6 mb-28">
+					<div class="h-56 bg-blue-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+						<img class="w-full h-full object-cover" src="assets/img/autres/code.gif" alt="Bannière TZ-Developement">
+					</div>
+					<div class="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+						<div class="md:ml-auto md:w-1/2 md:pl-10">
+							<p class="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
+								Rejoins nous !                                  
+							</p>
+							<p class="mt-3 text-lg text-gray-300">
+								Retrouve un serveur communautaire basé sur le développement de ressources FiveM et de site web.                                  
+							</p>
+							<div class="mt-8">
+								<div class="inline-flex rounded-md shadow">
+									<a href="https://discord.gg/rKhqhM5zcf" target="_blank" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 hover:bg-blue-600">
+										Discord                                                    
+										<svg class="-mr-1 ml-3 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+											<path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+											<path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+										</svg>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="cards">
+					<div class="services">
+						<div class="content content-2">
+							<div class="fab fa-youtube"></div>
+							<h2>Youtube</h2>
+							<p>
+								Retrouvez notre chaine youtube en cliquant sur le bouton juste en dessous.                            
+							</p>
+							<a href="https://www.youtube.com/channel/UClpIvy4h9LfoxGvEdEbyjhQ">S'abonner</a>
+						</div>
+					</div>
+				</div>
+
+				<div>
+					<div class="relative pb-14 z-0">
+						<div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-800"></div>
+						<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+							<div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
+								<div class="absolute inset-0">
+									<img class="h-full w-full object-cover" src="https://giphy.com/gifs/xT9IgBp4AkTt9N2aWI" alt="People working on laptops">
+									<div class="absolute inset-0 bg-blue-500 mix-blend-multiply"></div>
+								</div>
+								<!-- <div class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-20 lg:px-8">
+									<h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+										<span class="block text-black cst-title-TZ-Developement">Boutique</span>
+										<span class="block text-white-600">Notre boutique pour FiveM</span>
+									</h1>
+									<p class="mt-6 max-w-lg mx-auto text-center text-xl text-blue-50 sm:max-w-3xl">
+										Tu recherches un shop lié a FiveM de qualité à prix raisonable ? Alors notre shop est fais pour toi.                                                 
+									</p>
+
+
+									<h1 class="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+										<div class="mt-8">
+											<div class="inline-flex rounded-md shadow">
+												<a href="shop.html" target="_blank" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-700 hover:bg-blue-600">Boutique                                              
+													<svg class="-mr-1 ml-3 h-5 w-5 text-gray-400" xmlns="shop.html" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+														<path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+														<path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+													</svg>
+												</a>
+											</div>
+										</div>
+									</h1>
+								</div> -->
+							</div>
+						</div>
+					</div>
+			</main>
+			<footer style="text-align: center; color: #ffffff; font-family: metropolis; background-color: #252525; text-decoration: none; height: 140px; padding-top: 5px;">
+				<br>
+				<a href="index.html">Accueil</a>
+				    -                       
+				<a href="https://discord.gg/rKhqhM5zcf">Discord</a>
+
+				    -
+				<a href="https://www.youtube.com/channel/UClpIvy4h9LfoxGvEdEbyjhQ">Youtube</a>
+				<p>
+					TheZerox © 2021                 
+				</p>
+			</footer>
+			<script src="assets/js/app.js"></script>
+			<script src="https://unpkg.com/alpinejs" defer></script>
+		</body>
+	
+</html>

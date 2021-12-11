@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&amp;display=swap');
+
+.header {
+  height: 450px;
+  width: 100%;
+  background: blue;
+  position: relative;
+}
+
+.header__texture {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../img/header.jpg) center no-repeat;
+  background-size: cover;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../img/wave1.png);
+    background-size: 1000px 100px;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    z-index: 999;
+}
+
+.wave.wave1 {
+    animation: animate3 30s linear infinite;
+    z-index: 900;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+.wave.wave2 {
+    animation: animate2 15s linear infinite;
+    z-index: 899;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+.wave.wave3 {
+    animation: animate2 30s linear infinite;
+    z-index: 898;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15;
+}
+
+.wave.wave4 {
+    animation: animate2 5s linear infinite;
+    z-index: 897;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+@keyframes animate3 {
+    0%
+    {
+        background-position-x: 0;
+
+    }
+    100%
+    {
+        background-position-x: 1000px;
+        
+    }
+}
+
+@keyframes animate2 {
+    0%
+    {
+        background-position-x: 0;
+
+    }
+    100%
+    {
+        background-position-x: -1000px;
+        
+    }
+}
+
+.header__navbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.header__navbar--menu-link {
+    margin-left: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+.header__navbar--menu-link:hover {
+    color: #fff;
+}
+
+.header__slogan {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.h__slogan--title {
+    color: white;
+    font-size: 83px;
+    text-transform: uppercase;
+    font-family: 'Anton';
+    font-style: italic;
+    letter-spacing: 4px;
+}
+
+.h__slogan--btn {
+    font-size: 25px;
+    color: white;
+    border-bottom: 3px solid #f39c12;
+    display: inline;
+    z-index: 1000;
+}
+
+.header__navbar--toggle {
+    width: 40px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    display: none;
+    cursor: pointer;
+}
+
+.header__navbar--toggle-icons, .header__navbar--toggle-icons:before, .header__navbar--toggle-icons:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+}
+
+.header__navbar--toggle-icons:before {top: 10px;}
+.header__navbar--toggle-icons:after {top: -14px;}
+
+.is-open .header__navbar--menu {
+    transform: translateY(0);
+
+}
+
+@media only screen and (max-width: 670px){
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .header__navbar--toggle {
+        display: flex;
+        z-index: 1000;
+    }
+    .header__navbar--menu {
+        transition: all 0.3s ease-in-out;
+        transform: translateY(-100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100vw;
+        height: 50vh;
+        background: #f39c12;
+        top: 0;left: 0;
+    }
+    .header__navbar--menu-link {
+        margin: 20px 0;
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 972px) {
+    .h__slogan--title {
+        font-size: 48px;
+    }
+}
+
+.cst-title-Delta-Dev {
+    font-family: Raleway;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway';
+  color: rgba(255, 255, 255, 0.829);
+}
+.cards{
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+}
+.cards h1{
+  font-size: 40px;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.services{
+  display: flex;
+  align-items: center;
+}
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  background: #202020;
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+  transition: all .3s ease;
+}
+.content .fab{
+  font-size: 70px;
+  margin: 16px 0;
+}
+.content > *{
+  flex: 1 1 100%;
+}
+
+.content h2{
+  font-size: 30px;
+  margin: 16px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.content p{
+  font-size: 17px;
+  font-family: 'Raleway',Raleway;
+}
+.content a{
+  margin: 22px 0;
+  background: red;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid red;
+  padding: 15px 0;
+  border-radius: 10px;
+  transition: .3s ease;
+}
+.content a:hover{
+  border-radius: 4px;
+}
+@media (max-width: 900px) {
+  .services{
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.Partenaire {
+    width: 400px;
+    margin: 120px auto 120px;
+    background-color: #202020;
+    padding: 0 20px 20px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+    -webkit-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+    -moz-box-shadow: 0 2px 5px rgba(0,0,0,0.075);
+    text-align: center;
+  }
+
+  .Avatar-Partenaire {
+    border-radius: 100px;
+    overflow: hidden;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    margin: auto;
+    top: -60px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 0 13px #202020;
+    -webkit-box-shadow: 0 0 0 13px #202020;
+    -moz-box-shadow: 0 0 0 13px #202020;
+  }
+  .Avatar-Partenaire img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 100px;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: rgb(236, 236, 236);
+  }
+  h3 {
+    font-size: 25px;
+    color: red;
+    letter-spacing: 1px;
+    margin-bottom: 25px
+  }
+  h4 {
+    font-size: 13px;
+    color: red;
+    letter-spacing: 1px;
+    margin-bottom: 25px
+  }
+  p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 20px;
+    color: rgb(202, 202, 202);
+  }
+
